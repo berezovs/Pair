@@ -6,3 +6,6 @@ main.o: main.cpp pair.hpp
 
 pair.o: pair.cpp pair.hpp
   g++ -c pair.cpp  
+
+clean:
+  rm a.out *.o

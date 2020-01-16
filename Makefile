@@ -1,14 +1,8 @@
-CXX= g++
-CXXFlags= -c
+OBJECTS= main.o pair.o
 
-main: main.o pair.o 
-  $(CXX) main.o pair.o -o main
+main: $(OBJECTS)
+	$(CXX) $^ -o  $@
 
-main.o: main.cpp pair.hpp
-  $(CXX) $(CXXFlags) -c main.cpp
-
-pair.o: pair.cpp pair.hpp
-  $(CXX) $(CXXFlags) -c pair.cpp  
 
 clean:
-  rm main *.o
+	$(RM) main *.o
